@@ -93,5 +93,8 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 
+    /*multi level recycler view*/
+    implementation "com.muditsen.multilevelrecyclerview:multilevelview:$mutli_level_rv_version"
+
 
 }

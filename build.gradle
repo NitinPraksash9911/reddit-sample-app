@@ -19,12 +19,13 @@ buildscript {
         dagger_version = '2.27'
         coroutines_version = '1.3.5'
         kotlin_version = '1.3.70'
+        mutli_level_rv_version='1.0.0'
 
     }
     repositories {
         google()
         jcenter()
-        
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.1'
@@ -39,7 +40,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+
     }
 }
 

@@ -81,7 +81,6 @@
                     android:text="Ipsum days ago"
                     android:textColor="@color/lightGray"
                     app:layout_constraintEnd_toEndOf="parent"
-
                     app:layout_constraintTop_toBottomOf="@id/selfTextTv" />
 
                 <TextView
@@ -113,6 +112,14 @@
 
         </androidx.cardview.widget.CardView>
 
+        <com.multilevelview.MultiLevelRecyclerView
+            android:id="@+id/commentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardLayout" />
 
         <ImageView
             android:id="@+id/status_image"
