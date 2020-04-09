@@ -29,7 +29,7 @@ class ApiFactory @Inject constructor() {
      * [apiBaseUrl]
      * because we are adding it from parameter in the request
      * */
-    private val apiBaseUrl = ""
+    private val apiBaseUrl = ApiConstant.API_URL
 
     private var retrofit: Retrofit? = null
 

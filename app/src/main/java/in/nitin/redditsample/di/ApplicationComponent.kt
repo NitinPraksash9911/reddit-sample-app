@@ -1,5 +1,6 @@
 package `in`.nitin.redditsample.di
 
+import `in`.nitin.redditsample.ui.MainActivity
 import dagger.Component
 import javax.inject.Singleton
 
@@ -8,5 +9,6 @@ import javax.inject.Singleton
     modules = [ViewModelFactoryModule::class, ViewModelModule::class]
 )
 interface ApplicationComponent {
+    fun inject(mainActivity: MainActivity)
 
 }

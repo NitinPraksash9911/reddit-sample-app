@@ -1,6 +1,8 @@
 package `in`.nitin.redditsample.application
 
 
+import `in`.nitin.redditsample.di.ApplicationComponent
+import `in`.nitin.redditsample.di.DaggerApplicationComponent
 import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
@@ -9,6 +11,7 @@ import android.os.Build
 
 
 class RedditApplication : Application() {
+    private lateinit var mApplicationComponent: ApplicationComponent
 
     override fun onCreate() {
         super.onCreate()
@@ -16,6 +19,7 @@ class RedditApplication : Application() {
         if (instance == null) {
             instance = this
         }
+        mApplicationComponent = DaggerApplicationComponent.builder().build()
     }
 
     companion object {
@@ -25,6 +29,9 @@ class RedditApplication : Application() {
             return instance!!.isConnectionOn()
         }
 
+        fun getComponent(): ApplicationComponent? {
+            return instance!!.mApplicationComponent
+        }
     }
 
     @Suppress("DEPRECATION")
