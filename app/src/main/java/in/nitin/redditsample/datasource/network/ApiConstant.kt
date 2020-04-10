@@ -11,5 +11,7 @@ object ApiConstant {
     const val NETWORK_INTERCEPTOR_MAX_AGE = 5
 
     const val API_URL = "https://www.reddit.com/r/subreddit/"
+    const val LOGIN_URL = "https://www.reddit.com/api/login/"
+    const val API_TYPE = "json"
 
 }

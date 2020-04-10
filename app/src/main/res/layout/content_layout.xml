@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_12dp">
 
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/colorAccent"
+            app:cardBackgroundColor="@color/yellow"
             app:cardCornerRadius="@dimen/dimen_8dp"
             app:cardElevation="@dimen/dimen_8dp"
             app:contentPadding="@dimen/dimen_12dp"
@@ -36,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Lorem Ipsum Title"
-                    android:textColor="@color/yellow"
+                    android:textColor="@color/darkGray"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,7 +81,7 @@
                     android:drawablePadding="@dimen/dimen_4dp"
                     android:gravity="center_vertical"
                     android:text="Ipsum days ago"
-                    android:textColor="@color/lightGray"
+                    android:textColor="@color/darkGray"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/selfTextTv" />
 
@@ -121,20 +123,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cardLayout" />
 
-        <ImageView
-            android:id="@+id/status_image"
-            android:layout_width="@dimen/dimen_150dp"
-            android:layout_height="@dimen/dimen_150dp"
-            android:elevation="@dimen/dimen_12dp"
-            android:src="@drawable/loading_animation"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
 
 
